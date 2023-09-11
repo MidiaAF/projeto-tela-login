@@ -6,7 +6,7 @@ Lilas: #5f2c82
 Verde: #49a09d
 */
 
-
+/*        CONFIGURAÇÕES PARA CELULAR*/
 
 *{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
@@ -30,30 +30,41 @@ main{
 
 section#login{
     position: absolute; /*para colocar tela meio*/
+    
     top: 50%;
     left: 50%;   
     transform: translate(-50%, -50%); /*posição da tela no centro e esquerda*/
 
-
     background-color: white;
     width: 250px;
-    height: 500px;
+    height: 600px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+
+    transition: width 0.3s, height 0.3s; 
+    transition-timing-function:ease ;/*suavizar durante a animação de transição de uma tela para outra*/
+
+
 
 }
 
 section#login > div#imagem{
     display: block;
+    float: right;/*a imagem em outra posição*/
+    width: 50%;
+    height: 100vh;
     background: #5f2c82 url(../imagens/pexels.jpg);
     background-size: cover, no-repeat;
     border-radius:20px ;
-    background-position:top right ;
-    height: 200px;
+    background-position:top right ;/*posição da imagem*/
+    height: 300px;
 }
 
 section#login > div#formulario{
     display: block;
     padding: 10px;
+    float: left;
+    width: 100%;
+    height: 100vh;
 
 }
