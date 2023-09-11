@@ -35,8 +35,7 @@ section#login{
     position: absolute; /*para colocar tela meio*/
     
     top: 50%;
-    left: 50%;   
-    transform: translate(-50%, -50%); /*posição da tela no centro e esquerda*/
+    left: 50%;      
     overflow: hidden;
 
     background-color: white;
@@ -47,9 +46,7 @@ section#login{
 
     transition: width 0.3s, height 0.3s; 
     transition-timing-function:ease ;/*suavizar durante a animação de transição de uma tela para outra*/
-
-
-
+    transform: translate(-50%, -50%); /*posição da tela no centro e esquerda*/
 }
 
 section#login > div#imagem{
@@ -77,16 +74,48 @@ div#formulario > p {
     font-size: 0.9em
 }
 
-form > div.campo{
+form > div.campo{ /*onde tem o ícone*/
     background-color: #b46ae5;
+    border: 2px solid #b46ae5;/*colocou espaço entre bordar icone e caixa*/
     width: 100%;
     height: 40px;
     display: block;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-top: 5px;
     margin-bottom: 5px;
 
 }
+
+div.campo > label{ /*tira as palavras " Login e Senha " */
+    display: none;
+}
+
+div.campo > span{
+    color:white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+
+}
+
+div.campo > input {
+    background-color: #5fc7c3  ;
+    border:0px;
+    font-size: 1em;
+    width: calc(100% - 45.5px);/*Centralizar a caixa que esta dentro do Login e Senha*/    
+    height:100% ;
+    border-radius: 8px;
+    padding: 4px;
+
+    transform: translateY(-13px); /*colocar mais pra cima a caixa que esta dentro de login e senha*/
+
+}
+
+div.campo > input:focus-within{/*quando clicar na caixa em foco , muda de cor*/
+    background-color: white;
+    
+}
+
 
 form > input[type=submit]{
     display: block;/*posicionar "Entrar", em uma unica linha*/
@@ -101,10 +130,7 @@ form > input[type=submit]{
     margin-bottom:5px;
 }
 
-div.campo > label{ /*tira as palavras " Login e Senha " */
-    display: none;
 
-}
 
 form > input[type=submit]:hover{
     background-color:#27605e;
